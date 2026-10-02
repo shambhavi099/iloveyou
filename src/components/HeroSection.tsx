@@ -29,7 +29,7 @@ export function HeroSection({ onScrollDown }: HeroSectionProps) {
       </div>
 
       {/* Music */}
-      <audio id="loveSong" src="/love-song.mp3" loop />
+      <audio id="loveSong" src="/public/love-song.mp3" loop />
 
       <button
         onClick={() => {
