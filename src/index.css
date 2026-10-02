@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --canvas-cream: #FAF6F0;
+    --canvas-blush: #F4EAE4;
+    --text-primary: #382D2B;
+    --text-muted: #7E6E6A;
+    --accent-rose: #B87A6E;
+    --accent-warm: #C98A7D;
+    --card-bg: #FFFFFF;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--canvas-cream);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Prevent horizontal scroll glitch on mobile */
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+}
+
+/* Custom typography classes */
+.font-handwriting {
+  font-family: 'Caveat', cursive, sans-serif;
+}
+
+.font-serif-romantic {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Organic delicate grain overlay */
+.bg-soft-grain {
+  background-color: #FAF6F0;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(244, 219, 210, 0.45) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(235, 206, 195, 0.45) 0%, transparent 45%),
+    radial-gradient(rgba(170, 130, 115, 0.05) 1px, transparent 0);
+  background-size: auto, auto, 24px 24px;
+}
+
+/* Floating organic frame */
+@keyframes organicFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.4deg);
+  }
+}
+
+.animate-gentle-float {
+  animation: organicFloat 6s ease-in-out infinite;
+}
+
+/* Soft ambient glow */
+@keyframes ambientGlowPulse {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.03);
+  }
+}
+
+.animate-glow-pulse {
+  animation: ambientGlowPulse 4.5s ease-in-out infinite;
+}
+
+/* Subtle Polaroid Card Styling */
+.polaroid-card {
+  background: #FFFFFF;
+  box-shadow: 
+    0 4px 6px -1px rgba(60, 40, 35, 0.05),
+    0 12px 28px -4px rgba(60, 40, 35, 0.1),
+    0 0 0 1px rgba(60, 40, 35, 0.04);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.polaroid-card:hover, .polaroid-card:active {
+  box-shadow: 
+    0 8px 12px -2px rgba(60, 40, 35, 0.08),
+    0 20px 36px -6px rgba(60, 40, 35, 0.14),
+    0 0 0 1px rgba(60, 40, 35, 0.06);
+}
+
+/* Washi tape visual detail */
+.washi-tape {
+  background: rgba(235, 219, 210, 0.7);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  backdrop-filter: blur(1px);
+}

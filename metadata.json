@@ -1,0 +1,6 @@
+{
+  "name": "Happy Boyfriend's Day",
+  "description": "A warm, romantic, personal surprise webpage created with love for Boyfriend's Day.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
